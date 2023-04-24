@@ -1,6 +1,6 @@
 # grace-chart
 
-优雅图的图表库，基于Apache ECharts 5与Vue3
+优雅的图表库，基于Apache ECharts 5与Vue3
 
 
 
