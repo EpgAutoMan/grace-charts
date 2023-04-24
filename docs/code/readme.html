@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>grace-charts line example</title>
+  <style>
+    #app {
+      width: auto;
+      height: 400px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/grace-charts@latest/dist/grace-charts.umd.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <grace-line :dataset="dataset" theme="light"></grace-line>
+  <div>
+  <script>
+    Vue.createApp({
+      components: { 'grace-line': window['grace-charts']['GraceLine'] },
+      setup(){
+        return {
+          dataset: Vue.ref(
+            {
+              dimensions: ["时间", "数量"],
+              source: [
+                { 时间: "2020-01", 数量: 100 },
+                { 时间: "2020-02", 数量: 110 },
+                { 时间: "2020-03", 数量: 120 },
+                { 时间: "2020-04", 数量: 130 },
+                { 时间: "2020-05", 数量: 140 },
+              ],
+            }
+          ),
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

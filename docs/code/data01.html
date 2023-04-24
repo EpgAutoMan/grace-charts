@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>grace-charts example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/grace-charts@latest/dist/grace-charts.umd.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <grace-bar :dataset="dataset" height="400px" theme="light"></grace-bar>
+  <div>
+  <script>
+    Vue.createApp({
+      components: { 'grace-bar': window['grace-charts']['GraceBar'] },
+      setup(){
+        return {
+          dataset: Vue.ref(
+            {
+              dimensions: ["时间", "数量A", "数量B"],
+			  source: [
+				{ 时间: "2020-01", 数量A: 100, 数量B: 10 },
+				{ 时间: "2020-02", 数量A: 110, 数量B: 70 },
+				{ 时间: "2020-03", 数量A: 120, 数量B: 50 },
+				{ 时间: "2020-04", 数量A: 130, 数量B: 30 },
+				{ 时间: "2020-05", 数量A: 140, 数量B: 20 },
+			  ],
+            }
+          ),
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

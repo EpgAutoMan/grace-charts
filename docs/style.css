@@ -1,0 +1,8 @@
+.markdown-section pre {
+  max-height: 360px;
+}
+
+.code-iframe {
+  height: 410px;
+  width: 100%;
+}

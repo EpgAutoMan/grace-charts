@@ -1,50 +1,10 @@
-# grace-chart
+# grace-charts
 
-基于Vue3的优雅图表库，基于Apache ECharts 5与Vue3
+优雅的图表库，对 Apache ECharts 5 进行二次封装，仅支持 Vue 3，不支持 Vue 2，同时基于 Echarts 进行了一些拓展，增加了甘特图、任务日历图等，我们期望能够通过这个库完成所有数据分析展示的场景
 
+## 使用 NPM
 
-
-## 功能
-
-对Apache ECharts进行二次封装，同时基于 Echarts 进行了一些拓展，增加了甘特图、任务日历图等，支持数据响应式变化，可自适应浏览器窗口尺寸变化，并可以在一些延迟加载的组件中完美渲染，我们期望可以通过此库完成绝大部分数据可视化的展示，以下是已实现的图表列表：
-
-- 甘特图
-- 日历图
-- 词云图
-- 水球图
-- 盒须图
-- 折线图
-- 柱状图
-- 蜡烛图
-- 漏斗图
-- 拼图/环形饼图
-- 仪表盘
-- 关系图
-- 热力图
-- 雷达图
-- 桑基图
-- 散点图
-- ... ...
-
-
-
-## UI展示
-
-甘特图
-
-![](./images/gantt.png)
-
-日历图
-
-![](./images/calendar.png)
-
-水球图
-
-![](./images/water_polo.png)
-
-## 快速开始
-
-1. **使用 npm 安装 grace-charts**
+使用 npm 安装 grace-charts
 
 ```
 npm i grace-charts echarts -S
@@ -100,10 +60,9 @@ export default {
 </script>
 ```
 
+## 使用 CDN
 
-2. **使用CDN**
-
-   可直接在 html 中使用组件，引入：
+也可以直接在 html 中使用组件，引入：
 
 ```
 <script src="https://cdn.jsdelivr.net/npm/grace-charts@latest/dist/grace-charts.umd.min.js"></script>
@@ -158,6 +117,6 @@ export default {
 
 ```
 
-## 帮助文档
+效果展示：
 
-地址
+<iframe class="code-iframe" src="./code/readme.html" scrolling="no" frameborder="no"></iframe>

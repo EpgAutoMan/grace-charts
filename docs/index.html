@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>grace-charts</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="grace-charts - vue3.x & echarts5.x" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" href="./media/ballet.png" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/grace-charts@0.1.7/dist/grace-charts.umd.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+    <script>
+      window.$docsify = {
+        name: "grace-charts",
+        repo: "https://github.com/epgman/grace-charts",
+        loadSidebar: "sidebar.md",
+        formatUpdated: "{MM}/{DD} {HH}:{mm}",
+        mergeNavbar: true,
+        auto2top: true,
+        search: {
+          maxAge: 86400000,
+          paths: "auto",
+          placeholder: {
+            "/": "搜索",
+          },
+          noData: {
+            "/": "找不到结果",
+          },
+          depth: 2,
+        },
+        count: {
+          countable: true,
+          fontsize: "0.9em",
+          color: "rgb(90,90,90)",
+          language: "chinese",
+        },
+        copyCode: {
+          buttonText: "复制",
+          errorText: "复制出错",
+          successText: "复制成功",
+        },
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-count/dist/countable.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>grace-charts example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/grace-charts@latest/dist/grace-charts.umd.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <grace-line :xAxis="xAxis" :yAxis="yAxis" :series="series" height="400px" theme="light"></grace-line>
+  <div>
+  <script>
+    Vue.createApp({
+      components: { 'grace-line': window['grace-charts']['GraceLine'] },
+      setup(){
+        const xAxis = Vue.ref(
+			{
+			   type: 'category',
+			   data: ['Matcha Latte', 'Milk Tea', 'Cheese Cocoa', 'Walnut Brownie']
+			}
+		);
+		const yAxis = Vue.ref({});
+		const series = Vue.ref(
+			[
+				{
+				  type: 'bar',
+				  name: '2015',
+				  data: [89.3, 92.1, 94.4, 85.4]
+				},
+				{
+				  type: 'bar',
+				  name: '2016',
+				  data: [95.8, 89.4, 91.2, 76.9]
+				},
+				{
+				  type: 'bar',
+				  name: '2017',
+				  data: [97.7, 83.1, 92.5, 78.1]
+				}
+			]
+		);
+		return {
+		  xAxis,
+		  yAxis,
+		  series,
+		};
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
