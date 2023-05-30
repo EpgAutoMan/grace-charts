@@ -1,0 +1,55 @@
+{
+  "name": "grace-charts",
+  "version": "0.4.6",
+  "main": "./dist/grace-charts.common.js",
+  "unpkg": "./dist/grace-charts.umd.min.js",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "doc": "docsify serve docs",
+    "test": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "build": "vue-cli-service build --target lib --name grace-charts src/index.js",
+    "build:publish": "npm run test && npm run build && npm publish",
+    "format": "prettier src/  --write"
+  },
+  "author": "No Words",
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "chart",
+    "ECharts",
+    "grace-charts"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "echarts": ">= 5.0.0",
+    "echarts-liquidfill": ">= 3.1.0",
+    "echarts-wordcloud": ">= 2.0.0",
+    "vue": ">= 3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.21.1",
+    "docsify-cli": "^4.4.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.9.3",
+    "vue-jest": "^5.0.0-0"
+  }
+}

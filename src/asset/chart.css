@@ -1,0 +1,18 @@
+.grace-chart-container {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.grace-chart-empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #409eff;
+  font-size: 0.75em;
+}
