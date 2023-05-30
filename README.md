@@ -2,6 +2,8 @@
 
 优雅的图表库，基于Apache ECharts 5与Vue3
 
+中文文档：[https://epgman.github.io/grace-charts/#/](https://epgman.github.io/grace-charts/#/)
+
 
 
 ## 功能
